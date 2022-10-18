@@ -1,0 +1,19 @@
+/* General Rules Start */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-black: #222831;
+  --bg-gray: #30475e;
+  --bg-red: #f05454;
+  --bg-white: #ddd;
+  --bg-transparent: rgba(255, 255, 255, 0.3);
+}
+/* General Rules End */
