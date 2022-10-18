@@ -1,5 +1,6 @@
 const currentDate = document.querySelector(".current-date");
 const days = document.querySelector(".days");
+const prevNextIcons = document.querySelectorAll(".icons span");
 
 //getting new date, current year and month
 let date = new Date();
@@ -22,7 +23,7 @@ const months = [
 ];
 
 const renderCalendar = () => {
-  let lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate();
+  let lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate(); //getting last date of month
 
   let liDays = "";
   for (let i = 1; i <= lastDateOfMonth; i++) {
@@ -34,3 +35,13 @@ const renderCalendar = () => {
 };
 
 renderCalendar();
+
+prevNextIcons.forEach((icon) => {
+  //adding click event on both icons
+  icon.addEventListener("click", () => {
+    //if clicked icon is previous icon then decrement current month by 1, else, increment it by 1
+    currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+    renderCalendar();
+  });
+});
